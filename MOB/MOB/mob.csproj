@@ -129,6 +129,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Gramaticas.cs" />
+    <Compile Include="Inicializacao.cs" />
     <Compile Include="LerPalavras.cs" />
     <Compile Include="Lertexto.cs" />
     <Compile Include="MediaPlayer.cs">

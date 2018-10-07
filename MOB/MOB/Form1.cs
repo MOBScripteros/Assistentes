@@ -46,7 +46,7 @@ namespace mob
 		public Form1(string valor)
 		{
 			InitializeComponent();
-			textBox1.Text = valor;
+			
 
 		}
 
@@ -203,16 +203,10 @@ namespace mob
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Assistente.Fala("Olá, aguarde enquanto carrego o sistema");
-
-			LoadSpeech(); // chama o reconhecimento de voz
-			Assistente.Fala("Ok, todos os Arquivos forão carregados");
-			//Assistente.Fala("Estou as suas ordens " + System.Windows.Forms.SystemInformation.ComputerName);
-
+            Inicializacao.FraseInicial();
+            LoadSpeech(); // Carrega o reconhecimento de voz
+            Inicializacao.ChekInicial();
             AIML.ConfigAIMLFiles();
-
-
-
         }
 
 		// metodo que é chamado quando algo é reconhecido
@@ -558,11 +552,6 @@ namespace mob
 
 		}
 
-		private void pictureBox3_Click(object sender, EventArgs e)
-		{
-			youtube = new YoutubeMusicas();
-			youtube.Show();
-
-		}
+		
 	}
 }
